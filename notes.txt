@@ -1,0 +1,59 @@
+What is web services?
+
+A web service is any piece of software is available over the network (internet) and uses s standardized XML messaging System 
+
+1 : ALL web services are API's 
+2 : web service only be hosted on web server (CLOUD) (INTERNET ****************)
+3 : LOCAL web server will not work with web service 
+4 : a web service uses limited communication like SOAP , REST , XMP-RPC 
+5 : web service is interaction between servers over an internet(network)
+
+
+API 
+    An API is a set of programming code that enables data transmission between one software product and another
+
+1 : ALL api's are NOT web services
+2 : API can be hosted with Application(LOCAL server) or cloud server (internet)
+3 : API may use any style of communication like SOAP , REST , GRAPhQL , desktop app , android , 
+4 : APi as an interface between two Applications
+
+
+Similarities between API and WEB SERVICE 
+
+BOTH are accessed through HTTP/HTTPS to enable communication between  service provider and consumer
+BOTH are call a function , process the data and receive a response from provider 
+
+
+SOAP and REST and XML-RPC
+WEB SERVICE is standard GIVEN by W3c(World Wide Web Consortium)
+
+before web service 
+1 : CORBA 
+2 : DCOM (microsoft and IBM)
+3 : RMI (SUN micro system)
+
+4 // !WEB SERVICE is standard GIVEN by W3c(World Wide Web Consortium)
+
+
+
+WEB SERVICE IMPLEMENTED WITH IN TWO WAYS 
+1 : SOAP  => SIMPLE OBJECT ACCESS PROTOCOL => medium => HTTP(hyper text transfer protocol) format => XML
+2 : REST  => REPRESENTATIONAL STATE TRANSFER => medium => HTTP(hyper text transfer protocol) format => xml , json , csv , anything ....
+
+
+DESCRIBE web service 
+
+SOAP service 
+    WSDL => WEB SERVICE DESCRIPTION LANGUAGE 
+            STANDARD FORMAT FOR DESCRIBING A WEB SERVICE 
+            DEVELOPED BY MICROSOFT AND IBM
+   WSDL IS AN XML BASED PROTOCOL FOR EXCHANGING DATA BETWEEN SERVERS 
+   UDDI => universal description discovery Integration
+        xml based worldwide business registry
+
+        UDDI stands for Universal Description, Discovery and Integration. It provides a directory of Web-services interfaces (written in WSDL). It uses SOAP for queries and modifications.
+
+        
+
+
+

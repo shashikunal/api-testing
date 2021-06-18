@@ -42,8 +42,9 @@ WEB SERVICE IMPLEMENTED WITH IN TWO WAYS
 
 
 DESCRIBE web service 
-
+//!================================SOAP WEB SERVICE ================================/
 SOAP service 
+   = >  It is PROTOCOL  for designing web services over an HTTP , FTP , ....
     WSDL => WEB SERVICE DESCRIPTION LANGUAGE 
             STANDARD FORMAT FOR DESCRIBING A WEB SERVICE 
             DEVELOPED BY MICROSOFT AND IBM
@@ -52,6 +53,38 @@ SOAP service
         xml based worldwide business registry
 
         UDDI stands for Universal Description, Discovery and Integration. It provides a directory of Web-services interfaces (written in WSDL). It uses SOAP for queries and modifications.
+=> FORMATE SHOULD BE XML ONLY
+=> MEDIUM LIKE HTTP , SMTP , FTP
+=> calling by RPC(remote procedure call)
+=> performance slow 
+=> WSDL => UDDI => fro communication between provider and consumer
+
+//!================================RESTfull WEB SERVICE ================================/
+
+RESTfull WEB SERVICES ***************
+
+   => It is an architecture style for designing web services over an HTTP/HTTPS
+   => RESTfull web service doesn't  enforce any rule ....
+   => FORMATE like XML , JSON , CSV , TEXT .........
+   => MEDIUM SHOULD BE HTTP/HTTPS
+   => CALLING BY URL PATH (example for url www.google.com)
+   => USEs JSON or xml for communication send or receive
+   performance better 
+   90% companies are using REST web service
+
+
+  ***interview 
+   !Architectural Constraints
+    RESTFULL WEB SERVICE defines 6 Architectural Constraints
+    1 : client-server 
+        This constraint essentially means that client application and server application MUST be able to evolve separately without any dependency on each other. A client should know only resource URIs, and that’s all.
+
+    2 : Uniform interface 
+    3 : stateless 
+    4 : cacheable 
+    5 : layered System
+    6 : code on demand(optional) 
+
 
         
 

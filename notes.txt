@@ -80,13 +80,131 @@ RESTfull WEB SERVICES ***************
         This constraint essentially means that client application and server application MUST be able to evolve separately without any dependency on each other. A client should know only resource URIs, and that’s all.
 
     2 : Uniform interface 
-    3 : stateless 
-    4 : cacheable 
+    
+       1 =>  Resource based example (api/products)
+       Resource-Based: Individual resources are identified in requests. For example: API/users.
+
+       2 >  manipulation of Resource through representation
+       Manipulation of Resources Through Representations: Client has representation of resource and it contains enough information to modify or delete the resource on the server, provided it has permission to do so. Example: Usually user get a user id when user request for a list of users and then use that id to delete or modify that particular user.
+
+      3 : self- descriptive messages 
+      Self-descriptive Messages: Each message includes enough information to describe how to process the message so that server can easily analyses the request.
+
+      4 : HATEOAS (HYPERMEDIA) //it needs links to communicate other resources
+
+        Hypermedia as the Engine of Application State (HATEOAS): It need to include links for each response so that client can discover other resources easily.
+
+
+  3 : stateless 
+         Stateless: It means that the necessary state to handle the request is contained within the request itself and server would not store anything related to the session. 
+         
+
+    4 : Cacheable 
+        Cacheable: Every response should include whether the response is cacheable or not and for how much duration responses can be cached at the client side. Client will return the data from its cache for any subsequent request and there would be no need to send the request again to the server
+
     5 : layered System
+        Layered System tells the the architecture of the server can be layered into multiple servers(layers) like security layer , load balancing layer , cache layer , api layer , authenticated layer
+        without letting the client know about it 
+
+
     6 : code on demand(optional) 
+        REST allows client functionality to be extended by downloading and executing code in the form of applets or scripts
 
 
-        
+//*============================HTTP =========================*/
+HTTP  => HYPER TEXT TRANSFER PROTOCOL  => DEFAULT port NUMBER 80
+HTTPS => HYPER TEXT TRANSFER PROTOCOL WITH SECURE => DEFAULT PORT NUMBER 443 (PAYMENT)
+
+HTTP is a protocol which allows the fetching of resources, such as HTML documents , CSS , JS , IMAGES .... 
+It is the foundation of any data exchange on the Web and it is a client-server protocol
+
+HTTP METHODS (WEB APPLICATION OR MOBILE APPLICATION OR REST API)
+GET 
+    ?GET IS ONE OF THE IMPORTANT HTTP METHOD FOR FETCHING RESOURCES FROM SERVER 
+    !GET METHOD IS ONLY FOR RETRIEVED DATA FROM SERVER 
+    !GET METHOD doesn't HAVING BODY OR PAYLOAD
+    GET requests can be cached
+    GET requests remain in the browser history
+    GET requests can be bookmarked
+    GET requests should never be used when dealing with sensitive data
+   !GET METHOD DEFAULT HTTP HEADER =>  CONTENT-TYPE  => TEXT/HTML
+
+POST 
+    ?!POST IS ONE OF THE IMPORTANT HTTP METHOD FOR SENDING DATA TO SERVER 
+    !form data like html form HTTP POST or PUT
+    create NEW data should use HTTP POST METHOD
+    POST METHOD SHOULD HAVE PAYLOAD OR FORM BODY (INFORMATION)
+
+    BODY REQUEST IS INDICATED WITH CONTENT-TYPE HEADER 
+     IF IT IS HTML FORM => APPLICATION/X-WWW-FORM-URLENCODED
+     IF ANY UPLOAD FILE => MULTIPART-FORM-DATA  => HEADER
+    IF API => CONTENT-TYPE SHOULD BE  APPLICATION/JSON
+
+   POST requests are never cached
+   POST requests do not remain in the browser history
+   POST requests cannot be bookmarked
+   POST requests have no restrictions on data length
+   Data passed using the POST method will not visible in query parameters in browser URL.
+
+   !POST METHOD DEFAULT HTTP HEADER =>  CONTENT-TYPE  => APPLICATION/X-WWW-FORM-URLENCODED
+
+PUT 
+    PUT IS ALSO ONE OF THE HTTP REQUEST METHOD 
+    PUT method is used to update resource available on the server. ... You can use it to make a new resource or overwrite an existing one. PUT requests that the enclosed entity must be stored under the supplied requested URI (Uniform Resource Identifier).
+    PUT METHOD SHOULD HAVE PAYLOAD OR FORM BODY (INFORMATION)
+    !PUT METHOD DEFAULT HTTP HEADER =>  CONTENT-TYPE  => APPLICATION/X-WWW-FORM-URLENCODED
+
+
+PATCH 
+     The PATCH method is a request method supported by the Hypertext Transfer Protocol (HTTP) protocol for making partial changes to an existing resource. The PATCH method provides an entity containing a list of changes to be applied to the resource requested using the HTTP Uniform Resource Identifier (URI).
+
+DELETE 
+   THE DELETE METHOD IS USED FOR DELETING HTTP REQUEST RESOURCES 
+
+
+    CONNECT 
+        The HTTP CONNECT method starts two-way communications with the requested resource. It can be used to open a tunnel. For example, the CONNECT method can be used to access websites that use SSL (HTTPS). The client asks an HTTP Proxy server to tunnel the TCP connection to the desired destination
+
+        SYNTAX 
+        CONNECT WWW.PHONEPE.COM:443
+
+
+
+        POST      GET     PUT       DELETE
+CRUD => CREATE || READ || UPDATE  ||DELETE
+
+HTTP RESPONSE STATUS CODES 
+
+    HTTP RESPONSE CODES INDICATES WEATHER REQUEST HAS BEEN SUCCESSFULLY COMPLETED OR NOT  
+    5 RESPONSE CODE TYPES
+    
+    1 : INFORMATIONAL RESPONSES(100 , 199);
+        100 CONTINUE 
+        101 SWITCH PROTOCOL
+
+    2 : SUCCESSFULL RESPONSES (200 , 299);
+        200 => OK (GET, POST , PUT , DELETE)
+        201 => CREATED (POS202 => ACCEPTED 
+
+    3 : REDIRECTS (300 , 399);
+        301 => MOVED PERMANENTLY
+        302 => FOUND 
+        304 => NOT MODIFIED 
+
+    4 : CLIENT-ERRORS (400 , 499);
+        400 => BAD REQUEST 
+        401 => UNAUTHORIZED 
+        402 => PAYMENT REQUIRED 
+        403 => FORBIDDEN
+        404 => NOT FOUND 
+
+    5 : SERVER-ERRORS(500 , 599)
+        500 => INTERNAL SERVER ERROR 
+        501 => NOT IMPLEMENTED 
+        502 => BAD GATEWAY 
+        503 => SERVER UNAVAILABLE 
+        504 => GATEWAY TIMEOUT
+
 
 
 

@@ -1,47 +1,26 @@
 /*------javascript ------------------*/
+const http = require("http");
 
-const express = require("express");
-const cors = require("cors");
-const app = express();
-
-app.use(cors());
-app.get("/", (req, res) => {
-  let users = [
-    {
-      name: "shashi",
-      company: "Qspiders",
-      salary: 2000000,
-      designation: "html developer",
-    },
-    {
-      name: "sandeep",
-      company: "Qspiders",
-      salary: 2000000000,
-      designation: "selenium trainer",
-    },
-    {
-      name: "uday",
-      company: "Qspiders",
-      salary: 200000000000,
-      designation: "Java trainer",
-    },
-    {
-      name: "varun",
-      company: "Qspiders",
-      salary: 20000000000000000,
-      designation: "SQL trainer",
-    },
-    {
-      name: "vijay",
-      company: "Qspiders",
-      salary: 20000000000000000,
-      designation: "PROJECT trainer",
-    },
-  ];
-  res.status(200).json(users); //javascript code is converted into JSON
+let server = http.createServer((req, res) => {
+  if (req.method === "POST") {
+    console.log("ok");
+  } else {
+    res.setHeader("content-type", "text/html");
+    res.end(`<form method="post" action="/">
+    <input type="text" name="username" />
+    <button>submit</button>
+  </form> `);
+  }
 });
 
-app.listen(4000, err => {
-  if (err) throw err;
-  console.log("my web server is running on port number " + 4000);
+server.listen(5000, err => {
+  console.log("server is running on port number 5000");
 });
+
+
+
+window.fetch('http://localhost:5000/api/fetch-employees').then(data => {
+  data.json().then(res => {
+    console.log(res)
+  }).catch(err => console.log(err))
+}).catch(err => console.log(err))

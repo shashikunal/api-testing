@@ -208,3 +208,50 @@ HTTP RESPONSE STATUS CODES
 
 
 
+IF it is  API
+ //?   CONTENT-TYPE = APPLICATION/JSON
+
+IF IT IS HTML 
+//?   CONTENT-TYPE = TEXT/HTML
+
+IF IT IS PLAIN TEXT
+
+//? CONTENT-TYPE = TEXT/PLAIN 
+
+
+
+
+WHAT IS JSON?
+STANDS JAVASCRIPT OBJECT NOTATION
+    JSON IS LIGHTWEIGHT FORMAT FOR DATA EXCHANGING OR TRANSFERRING DATA BETWEEN SERVER  AND CLIENT /SERVER TO SERVER 
+    JSON CAN STORE DATA AND TRANSPORTING DATA
+
+    FOR API COMMUNICATION USES JSON OR XML FORMAT 
+
+
+    JSON SUPPORTED  DATA TYPES 
+
+    STRING ""
+    NUMBER 10
+    BOOLEAN true
+    ARRAY []
+    OBJECT {}
+    NULL 
+
+    JSON IS IDENTICAL TO JAVASCRIPT OBJECTS 
+
+    JSON SYNTAX RULES                            KAY   :    VALUE            
+   //?1 DATA SHOULD BE KEY AND VALUE PAIR LIKE {"name" : "shashi"}
+   2 : DATA IS SEPARATED BY  COMMAS
+
+    //!JSON SYNTAX
+   {
+       "username' : "shashi",
+       "company":"Qspiders",
+       "salary":200000,
+       "isAvailable" : true,
+       "skills" : ["api testing" , "selenium" , "manual testing"],
+       "obj" : {
+           "user" : "manu"
+       }
+   }

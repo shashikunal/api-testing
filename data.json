@@ -1,0 +1,13 @@
+{
+    "username" : "shashi",
+    "company" : "Qspiders",
+    "salary" : 200000,
+    "IaAvailable" : true,
+    "skills" : ["Selenium" , "Manual Testing" , "Api testing" , "java"],
+    "users_details" : {
+        "my dob" : "21/11/1990",
+        "location" : "mandya",
+        "education" : "BE"
+    },
+    "data" : null
+}

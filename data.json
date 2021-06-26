@@ -1,13 +1,57 @@
-{
-    "username" : "shashi",
-    "company" : "Qspiders",
-    "salary" : 200000,
-    "IaAvailable" : true,
-    "skills" : ["Selenium" , "Manual Testing" , "Api testing" , "java"],
-    "users_details" : {
-        "my dob" : "21/11/1990",
-        "location" : "mandya",
-        "education" : "BE"
-    },
-    "data" : null
-}
+[
+  {
+    "emp_id": "Qsp1",
+    "emp_name": "Paddu",
+    "emp_salary": 20000,
+    "emp_designation": "Api Tester",
+    "emp_location": "Mysore",
+    "emp_education": "BE",
+    "emp_gender": "male",
+    "emp_available": true,
+    "emp_experience": 10.5,
+    "emp_worked_companies": ["Infosys", "capgemini", "google", "facebook"],
+    "emp_languages": ["kannada", "hindi", "english"],
+    "emp_dob": "31/04/1990",
+    "emp_personal_details": {
+      "emp_mail_id": "paddu@gmail.com",
+      "emp_contact_num": 998568939
+    }
+  },
+  {
+    "emp_id": "Qsp2",
+    "emp_name": "Ganesh",
+    "emp_salary": 200000,
+    "emp_designation": "fullstack api tester",
+    "emp_location": "Mandya",
+    "emp_education": "BTECH",
+    "emp_gender": "male",
+    "emp_available": false,
+    "emp_experience": "13 years",
+    "emp_worked_companies": ["Qspiders", "CGI", "google", "facebook"],
+    "emp_languages": ["kannada", "hindi", "english"],
+    "emp_dob": "31/04/1991",
+    "emp_personal_details": {
+      "emp_mail_id": "paddu@gmail.com",
+      "emp_contact_num": 9985689390
+    }
+  },
+  {
+    "emp_id": "Qsp3",
+    "emp_name": "Mani",
+    "emp_salary": 200000,
+    "emp_designation": "fullstack api tester",
+    "emp_location": "Mandya",
+    "emp_education": "BTECH",
+    "emp_gender": "male",
+    "emp_available": false,
+    "emp_experience": "13 years",
+    "emp_worked_companies": ["Qspiders", "CGI", "google", "facebook"],
+    "emp_languages": ["kannada", "hindi", "english"],
+    "emp_dob": "31/04/1991",
+    "emp_personal_details": {
+      "emp_mail_id": "paddu@gmail.com",
+      "emp_contact_num": 998568939,
+      "emp_skills": [{ "frontend": ["js", "html", "css"], "backend": ["java", "spring"] }  ,{} , {}]
+    }
+  }
+]

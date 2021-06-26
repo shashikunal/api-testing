@@ -225,7 +225,8 @@ WHAT IS JSON?
 STANDS JAVASCRIPT OBJECT NOTATION
     JSON IS LIGHTWEIGHT FORMAT FOR DATA EXCHANGING OR TRANSFERRING DATA BETWEEN SERVER  AND CLIENT /SERVER TO SERVER 
     JSON CAN STORE DATA AND TRANSPORTING DATA
-
+    JSON is language independent *
+    JSON is "self-describing" and easy to understand
     FOR API COMMUNICATION USES JSON OR XML FORMAT 
 
 
@@ -255,3 +256,26 @@ STANDS JAVASCRIPT OBJECT NOTATION
            "user" : "manu"
        }
    }
+
+JSON METHODS 
+JSON.parse(); //converting json object into JAVASCRIPT OBJECT
+JSON.stringify(); //converting JAVASCRIPT object into JSON OBJECT
+
+**** interview QST //difference between JSON and XML 
+JSON                                    XML 
+
+ Javascript object notation             Extensible Markup Language 
+ JSON is easy to learn                   XML is Quit complex compare to JSON 
+ Json is simple to read and write        XML more COmplex to read and write 
+ JSON is Data oriented                   XML is DOCUMENT oriented 
+ JSON is less secure compare to XML      XML IS MORE SECURE 
+ JSON SUPPORTS ARRAY AND OBJECTS         XML doesn't SUPPORT ARRAY AND OBJECTS
+ {                                       
+                                          <Qspiders>
+                                            <name>paddu</name>
+                                            <age>20</age>
+                                            <girlFRD></girlFRD>
+                                          </Qspiders>
+     "name" : "paddu",
+     "age" : 20
+ }

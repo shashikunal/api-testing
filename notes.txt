@@ -279,3 +279,59 @@ JSON                                    XML
      "name" : "paddu",
      "age" : 20
  }
+
+
+
+
+ postman  variables
+    1 : GLOBAL SCOPE  (global variable) ;
+        IT ACCESSIBLE THROUGHOUT THE WORK SPACE
+
+    2 : COLLECTION SCOPE (COLLECTION VARIABLE)
+         IT ACCESSIBLE ONLY COLLECTION LEVEL
+
+    3 : Environment Variables 
+           Development Environment (DEVELOPER)
+           Staging Environment (TESTING ENVIRONMENT)
+           Production Environment (live application or already deployed on cloud remote server)
+        IT SUPPORTS ROLE BASED ACCESS LEVELS 
+        ONLY ONE ENVIRONMENT CAN SELECT AT A TIME
+    
+    4 : LOCAL VARIABLE 
+        LOCAL VARIABLE IS TEMPORARY VARIABLE IT IS ACCESSIBLE ONLY THROUGH SCRIPTS
+
+   5 : DATA VARIABLE
+        DATA VARIABLE  COMES FROM EXTERNAL SOURCES FILE LIKE JSON , CSV , TEXT
+        DEFINE DATA WHEN YOU ARE RUNNING ON COLLECTION RUNNER
+
+
+        BY USING SCRIPTING DECLARE VARIABLE 
+        //?GLOBAL VARIABLE => select test tab in postman
+        pm.globals.set("BASE_URL" , "api.openweathermap.org/data/2.5/weather");
+        pm.globals.set("CITY_NAME" , "mysore");
+        pm.globals.set("APPID" , "1f9121f7c5e7b18129a1498b1f423a9e")
+
+        //!Environment variable by using script 
+
+        pm.environment.set("BASE_URL" , "api.openweathermap.org/data/2.5/weather");
+        pm.environment.set("CITY_NAME" , "mysore");
+        pm.environment.set("APPID" , "1f9121f7c5e7b18129a1498b1f423a9e")
+
+        //!COLLECTION LEVEL VARIABLE BY USING SCRIPT
+
+        pm.collectionVariables.set("BASE_URL" , "api.openweathermap.org/data/2.5/weather");
+        pm.collectionVariables.set("CITY_NAME" , "mysore");
+        pm.collectionVariables.set("APPID" , "1f9121f7c5e7b18129a1498b1f423a9e");
+
+
+        LOCAL VARIABLE 
+        pm.variables.set("username" , "paddu");
+        pm.variables.set("age" , 50);
+
+        var username = pm.variables.get("username");
+        var age = pm.variables.get("age");
+
+        console.log(username);
+        console.log(age)
+
+

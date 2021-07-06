@@ -335,3 +335,30 @@ JSON                                    XML
         console.log(age)
 
 
+====================AUTHORIZATION =====================
+Apis use Authorization to ensure that client request access data securely.
+can Involve authenticated sender of request and verifying that data permission to access or manipulated data
+
+1 : Inherit auth IT IS GETTING ITS PARENT
+2 : no auth
+3 : API KEY
+4 : Bearer token 
+5 : basic auth 
+6 : Digest Auth 
+7 : oAuth1
+8 : oAuth2 
+
+
+basic Auth 
+    username and password
+
+Basic auth
+Basic authentication involves sending a verified username and password with your request. In the request Authorization tab, select Basic Auth from the Type dropdown list.
+
+//!https://postman-echo.com/basic-auth
+BASIC AUTH
+    USERNAME AND PASSWORD
+    => header 
+        Authorization = "postman:password"
+
+    
